@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FirstGroupProject",
+    "\\FirstGroupProject\\FirstGroupProject",
+    "\\FirstGroupProject\\FirstGroupProject\\DistrictsRepository"
   ],
+  "SelectedNode": "\\FirstGroupProject\\FirstGroupProject.sln",
   "PreviewInSolutionExplorer": false
 }
