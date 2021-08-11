@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FirstGroupProject",
+    "\\FirstGroupProject\\FirstGroupProject",
+    "\\FirstGroupProject\\FirstGroupProject\\bin\\Debug\\net5.0",
+    "\\FirstGroupProject\\FirstGroupProject\\bin\\Release"
   ],
+  "SelectedNode": "\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
   "PreviewInSolutionExplorer": false
 }
