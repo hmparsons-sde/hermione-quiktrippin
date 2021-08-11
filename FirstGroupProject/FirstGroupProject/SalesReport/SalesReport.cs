@@ -10,7 +10,7 @@ namespace FirstGroupProject.SalesReport
     class SalesReport
     {
         static List<Districts> _people = new List<Districts>
-        { }
+        { };
         public string StroreNumber { get; set; }
         public string StoreManager { get; set; }
         public string AssistantManager { get; set; }
