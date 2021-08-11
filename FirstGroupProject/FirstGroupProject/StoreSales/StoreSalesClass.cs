@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstGroupProject.StoresRepository
+namespace FirstGroupProject.StoreSales
 {
-    class Stores
+    class StoreSalesClass
     {
     }
+
 }
