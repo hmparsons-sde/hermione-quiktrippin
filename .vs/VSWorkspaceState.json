@@ -3,9 +3,8 @@
     "",
     "\\FirstGroupProject",
     "\\FirstGroupProject\\FirstGroupProject",
-    "\\FirstGroupProject\\FirstGroupProject\\bin\\Debug\\net5.0",
-    "\\FirstGroupProject\\FirstGroupProject\\bin\\Release"
+    "\\FirstGroupProject\\FirstGroupProject\\DistrictsRepository"
   ],
-  "SelectedNode": "\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
+  "SelectedNode": "\\FirstGroupProject\\FirstGroupProject.sln",
   "PreviewInSolutionExplorer": false
 }
