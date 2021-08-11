@@ -31,8 +31,8 @@ namespace FirstGroupProject
                     Console.WriteLine("We're adding an employee");
                     Console.Write("What store number? ");
                     storeNumber = Int32.Parse(Console.ReadLine());
-                    var assocaitedStores = new Employee();
-                    assocaitedStores.ListEmployees(storeNumber);
+                    var associatedStores = new Employee();
+                    associatedStores.ListEmployees(storeNumber);
                     break;
                 case "4":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");
