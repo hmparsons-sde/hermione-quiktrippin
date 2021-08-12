@@ -12,6 +12,6 @@ namespace FirstGroupProject.DistrictsRepository
             DistrictNumber = districtNumber;
             DistrictManager = districtManager;
         }
-        public List<Stores.Stores> GetStoreNumbers() => 
+        //public List<Stores.Stores> GetStoreNumbers() => 
     }
 }
