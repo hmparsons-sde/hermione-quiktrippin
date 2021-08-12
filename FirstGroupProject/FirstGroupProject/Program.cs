@@ -74,7 +74,7 @@ namespace FirstGroupProject
                     Console.Write("What store number? ");
                     storeNumber = Int32.Parse(Console.ReadLine());
                     var Employee1 = new Employee();
-                    va.Add(Employee1);
+                    //va.Add(Employee1);
                     var associatedStores = new Employee();
                     associatedStores.ListEmployees(storeNumber);
                     break;
