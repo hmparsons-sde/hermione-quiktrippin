@@ -23,6 +23,8 @@ namespace FirstGroupProject
             {
                 case "1":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");
+                    // do we generate 4 random values to add to a sales list/dictionary?
+                    // do we keep it simple and manually input each value to append to existing collection?
                     break;
                 case "2":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");
@@ -31,8 +33,8 @@ namespace FirstGroupProject
                     Console.WriteLine("We're adding an employee");
                     Console.Write("What store number? ");
                     storeNumber = Int32.Parse(Console.ReadLine());
-                    var assocaitedStores = new Employee();
-                    assocaitedStores.ListEmployees(storeNumber);
+                    var associatedStores = new Employee();
+                    associatedStores.ListEmployees(storeNumber);
                     break;
                 case "4":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");
