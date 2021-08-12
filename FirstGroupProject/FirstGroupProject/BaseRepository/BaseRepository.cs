@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FirstGroupProject.BaseRepository
 {
-    public class BaseRepository
+    public class RepositoryBase
     {
         class DistrictRepository
         {
