@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Me\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj": {}
+    "C:\\Users\\HollyParsons\\hmparsons-sde\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Me\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj": {
+    "C:\\Users\\HollyParsons\\hmparsons-sde\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Me\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
+        "projectUniqueName": "C:\\Users\\HollyParsons\\hmparsons-sde\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
         "projectName": "FirstGroupProject",
-        "projectPath": "C:\\Users\\Me\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
-        "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Me\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\obj\\",
+        "projectPath": "C:\\Users\\HollyParsons\\hmparsons-sde\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
+        "packagesPath": "C:\\Users\\HollyParsons\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HollyParsons\\hmparsons-sde\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HollyParsons\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

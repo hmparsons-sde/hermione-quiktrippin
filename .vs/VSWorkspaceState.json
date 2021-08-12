@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\FirstGroupProject",
-    "\\FirstGroupProject\\FirstGroupProject",
-    "\\FirstGroupProject\\FirstGroupProject\\DistrictsRepository"
+    "\\FirstGroupProject\\FirstGroupProject"
   ],
-  "SelectedNode": "\\FirstGroupProject\\FirstGroupProject.sln",
+  "SelectedNode": "\\FirstGroupProject\\FirstGroupProject\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
