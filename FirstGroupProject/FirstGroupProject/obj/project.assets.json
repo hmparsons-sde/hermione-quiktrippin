@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Me\\.nuget\\packages\\": {}
+    "C:\\Users\\rober\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Me\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
+      "projectUniqueName": "C:\\Users\\rober\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
       "projectName": "FirstGroupProject",
-      "projectPath": "C:\\Users\\Me\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
-      "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Me\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\obj\\",
+      "projectPath": "C:\\Users\\rober\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\FirstGroupProject.csproj",
+      "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rober\\Source\\Repos\\hermione-quiktrippin\\FirstGroupProject\\FirstGroupProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

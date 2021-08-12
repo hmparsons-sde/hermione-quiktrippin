@@ -26,7 +26,7 @@ namespace FirstGroupProject.Employees
         static List<Employee> _employee = new List<Employee>
         {
             new Employee{Name="Hagrid", JobTitle="DisctricManager", StoreNumber=823, RetailSales=4314 },
-            new Employee{Name="Luna Luvgood", JobTitle="Store Manager", StoreNumber=813, RetailSales=1234 },
+            new Employee{Name="Luna Luvgood", JobTitle="Store Manager", StoreNumber=823, RetailSales=1234 },
             //new Employee("Nevil Longbottom", "Assistant to the Regional Manager", 823, 6578),
             //new Employee("Arry Potuh", "Associate", 823, 924),
         };
@@ -47,7 +47,6 @@ namespace FirstGroupProject.Employees
                 if (employee.StoreNumber == storeNumber)
                 {
                     Console.WriteLine(employee.Name);
-                    return _employee;
                 }
                 else
                 {
