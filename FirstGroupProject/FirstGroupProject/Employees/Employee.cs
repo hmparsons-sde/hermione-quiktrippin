@@ -47,7 +47,6 @@ namespace FirstGroupProject.Employees
                 if (employee.StoreNumber == storeNumber)
                 {
                     Console.WriteLine(employee.Name);
-                    return _employee;
                 }
                 else
                 {
