@@ -23,6 +23,8 @@ namespace FirstGroupProject
             {
                 case "1":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");
+                    // do we generate 4 random values to add to a sales list/dictionary?
+                    // do we keep it simple and manually input each value to append to existing collection?
                     break;
                 case "2":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");
