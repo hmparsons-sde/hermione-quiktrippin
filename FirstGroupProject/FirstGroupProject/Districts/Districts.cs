@@ -1,17 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using FirstGroupProject.Districts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace FirstGroupProject.DistrictsRepository
+namespace FirstGroupProject.Districts
 {
     class Districts
     {
-        public short DistrictNumber { get; set; }
+        // TODO: add collection of Stores
+        // TODO: ability to add District Manager
+        public DistrictType DistrictHouse { get; set; }
         public string DistrictManager { get; set; }
 
-        public Districts(short districtNumber, string districtManager)
+        public Districts(DistrictType districtHouse, string districtManager)
         {
-            DistrictNumber = districtNumber;
+            DistrictHouse = districtHouse;
             DistrictManager = districtManager;
         }
-        //public List<Stores.Stores> GetStoreNumbers() => 
+
     }
 }
