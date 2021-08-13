@@ -1,5 +1,4 @@
 ﻿using FirstGroupProject.Employees;
-using FirstGroupProject.BaseRepository;
 using System;
 
 
@@ -9,6 +8,7 @@ namespace FirstGroupProject
     {
         static void Main(string[] args)
         {
+            //TODO: add dummy data if needed
             int storeNumber;
             string name;
             string jobTitle;
@@ -38,8 +38,8 @@ namespace FirstGroupProject
                     bool startLoop = true;
                     while (startLoop)
                     {
-                        Console.WriteLine("What is their job title?\n\x1B[4m ");
-                        Console.WriteLine("1. District Manager\x1B[0m");
+                        Console.WriteLine("\n\x1B[4m What is their job title?\x1B[0m ");
+                        Console.WriteLine("1. District Manager");
                         Console.WriteLine("2. Store Manager");
                         Console.WriteLine("3. Assistant Manager");
                         Console.WriteLine("4. Associate");
@@ -73,13 +73,12 @@ namespace FirstGroupProject
                     }
                     Console.Write("What store number? ");
                     storeNumber = Int32.Parse(Console.ReadLine());
-                    var Employee1 = new Employee();
-                    va.Add(Employee1);
-                    var associatedStores = new Employee();
-                    associatedStores.ListEmployees(storeNumber);
+                    //TODO: add new Employee to employee list
+                    //TODO: display employee info report (maybe)
                     break;
                 case "4":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");
+                    //TODO: Create store variables and add them to collection
                     break;
                 case "5":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");
