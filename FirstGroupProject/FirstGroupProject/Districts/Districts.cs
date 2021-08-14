@@ -19,15 +19,20 @@ namespace FirstGroupProject.Districts
 
         public District(DistrictType district)
         {
-            //var districtName = district.ToString();
-            //var districtStores = new StoreRepository();
-            //var storesInDistrict = districtStores.GetAll().Where(s => s.DistrictHouse == district.ToString()).ToList();
-            //foreach (Store s in storesInDistrict)
-            //{
-            //    Console.WriteLine($"Store {s.StoreNumber} is in {s.DistrictHouse}. The store manager is {s.StoreManager.Name}");
-            //}
+            var districtName = district.ToString();
+            var districtStores = new StoreRepository();
+            var storesInDistrict = districtStores.GetAll().Where(s => s.DistrictHouse == district.ToString()).ToList();
+            foreach (Store s in storesInDistrict)
+            {
+                Console.WriteLine($"Store {s.StoreNumber} is in {s.DistrictHouse}. The store manager is {s.StoreManager.Name}");
+            }
 
         }
+
+        //public void Add(District district)
+        //{
+        //    _stores.Add(district);
+        //}
 
     }
 }

@@ -4,6 +4,7 @@ using FirstGroupProject.Stores;
 using FirstGroupProject.StoreSales;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FirstGroupProject
 {
@@ -15,6 +16,7 @@ namespace FirstGroupProject
             int storeNumber;
             string name;
             string jobTitle;
+            string districtType;
             Dictionary<int, Sale> wizardSalesDictionary = new();
             bool menuLoop = true;
             var initialSelection = "";
@@ -94,7 +96,52 @@ namespace FirstGroupProject
                             Console.Clear();
                             goto BeginningOfMainMenu;
                         case "2":
-                            Console.WriteLine("WE'RE STILL WORKING ON THIS");
+                            Console.Clear();
+                            Console.WriteLine("Lets generate some numbers for you.");
+                            var districtHouse = Console.ReadLine();
+                            bool otherLoop = true;
+                            while (otherLoop)
+                            {
+                                Console.WriteLine("\n\x1B[4m Which district's report would you like?\x1B[0m ");
+                                Console.WriteLine("1. Gryffindor");
+                                Console.WriteLine("2. Hufflepuff");
+                                Console.WriteLine("3. Ravenclaw");
+                                Console.WriteLine("4. Slytherin");
+                                switch (Console.ReadLine())
+                                {
+                                    case "1":
+                                        districtHouse = DistrictType.Gryffindor.ToString();
+                                        Console.WriteLine($"District Sales for {districtHouse}");
+                                        var districtStores = new StoreRepository();
+                                        var storesInDistrict = districtStores.GetAll().Where(s => s.DistrictHouse == districtHouse.ToString()).ToList();
+                                        foreach (Store s in storesInDistrict)
+                                        {
+                                            Console.WriteLine($"Store {s.StoreNumber} is in {s.DistrictHouse}. The store manager is {s.StoreManager.Name}");
+                                        }
+                                        otherLoop = false;
+                                        break;
+                                    case "2":
+                                        districtHouse = DistrictType.Hufflepuff.ToString();
+                                        Console.WriteLine($"District Sales for {districtHouse}");
+                                        otherLoop = false;
+                                        break;
+                                    case "3":
+                                        districtHouse = DistrictType.Ravenclaw.ToString();
+                                        Console.WriteLine($"District Sales for {districtHouse}");
+                                        otherLoop = false;
+                                        break;
+                                    case "4":
+                                        districtHouse = DistrictType.Slytherin.ToString();
+                                        Console.WriteLine($"District Sales for {districtHouse}");
+                                        otherLoop = false;
+                                        break;
+                                    default:
+                                        Console.WriteLine("That is not a valid answer!");
+                                        break;
+                                }
+
+                             }
+
                             break;
                         case "3":
                             Console.WriteLine("We're adding an employee");
