@@ -14,6 +14,7 @@ namespace FirstGroupProject
             int storeNumber;
             string name;
             string jobTitle;
+            Dictionary<int, Sale> wizardSalesDictionary = new();
 
             bool menuLoop = true;
             var initialSelection = "";
@@ -74,12 +75,11 @@ namespace FirstGroupProject
                             switch (userResponse.ToLower())
                             {
                                 case "save":
-                                    Dictionary<int, Sale> wizardSalesDictionary = new();
                                     wizardSalesDictionary.Add(saleId, value: new Sale(storeNumberInput, gasYearly, gasCurrentQuarter, retailYearly, retailCurrentQuarter));
                                     Console.Clear();
                                     Console.WriteLine($"You added this sales log for store number {storeNumberInput}");
                                     menuLoop = false;
-                                    goto SalesMenu;
+                                    break;
                                 case "discard":
                                     Console.WriteLine("Cool. It's gone.");
                                     menuLoop = false;
