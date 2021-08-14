@@ -1,8 +1,9 @@
 ﻿using FirstGroupProject.Districts;
 using FirstGroupProject.Employees;
 using FirstGroupProject.Stores;
+using FirstGroupProject.StoreSales;
 using System;
-
+using System.Collections.Generic;
 
 namespace FirstGroupProject
 {
@@ -194,10 +195,19 @@ namespace FirstGroupProject
                     }
 
                     break;
-                case "5":
-                    Console.WriteLine("WE'RE STILL WORKING ON THIS");
-                    break;
+                     case "5":
+                        initialSelection = "5";
+                        Console.Clear();
+                        menuLoop = false;
+                            break;
+                        default:
+                            Console.Clear();
+                            Console.WriteLine("Invalid choice");
+                            break;
+                    }
+                }
             }
+            while (initialSelection != "5");
         }
     }
 }
