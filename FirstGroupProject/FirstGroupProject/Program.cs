@@ -21,6 +21,7 @@ namespace FirstGroupProject
             {
                 while (menuLoop)
                 {
+                BeginningOfMainMenu:
                     Console.WriteLine("Mmmm, yes. Lets talk money. You run this town. Lets look at the districts!\n\x1B[4m");
 
                     Console.WriteLine("Please choose an option:\x1B[0m");
@@ -34,8 +35,10 @@ namespace FirstGroupProject
                     switch (initialSelection)
                     {
                         case "1":
+                        SalesMenu:
                             //entering sales
                             //TO DO: add sales to dictionary
+                            //bool saleLoop = true;
                             Console.Clear();
 
                             Console.WriteLine("What is the store number?");
@@ -46,26 +49,26 @@ namespace FirstGroupProject
                             Console.WriteLine();
 
                             Console.WriteLine("Enter the Yearly Gas Sales in USD:");
-                            var gasYearly = short.Parse(Console.ReadLine());
+                            var gasYearly = int.Parse(Console.ReadLine());
 
                             Console.WriteLine("Enter this Quarter's Gas Sales in USD:");
-                            var gasCurrentQuarter = short.Parse(Console.ReadLine());
+                            var gasCurrentQuarter = int.Parse(Console.ReadLine());
 
                             Console.WriteLine("Enter the Yearly Retail Sales in USD:");
-                            var retailYearly = short.Parse(Console.ReadLine());
+                            var retailYearly = int.Parse(Console.ReadLine());
 
                             Console.WriteLine("Enter this Quarter's Retail Sales in USD:");
-                            var retailCurrentQuarter = short.Parse(Console.ReadLine());
+                            var retailCurrentQuarter = int.Parse(Console.ReadLine());
 
                             Console.WriteLine("Assign a sales id:");
-                            var saleId = short.Parse(Console.ReadLine());
+                            var saleId = int.Parse(Console.ReadLine());
 
                             Console.Clear();
                             Console.WriteLine($"{storeNumberInput}-------------\nSold {gasYearly}USD in gas sales, 2020\nSold {gasCurrentQuarter}USD in gas, Q2 2021\nSold {retailYearly}USD in retail sales, 2020\nSold {retailCurrentQuarter}USD in gas, Q2 2021");
                             Console.WriteLine("");
 
                             Console.Clear();
-                            Console.WriteLine("Would you like to save this report or discard it? (Please type 'save' or 'discard')");
+                            Console.WriteLine("Would you like to save this report, discard it, or return to the main menu? (Please type 'save,' 'discard,' or 'menu.')");
                             var userResponse = Console.ReadLine();
                             switch (userResponse.ToLower())
                             {
@@ -75,17 +78,21 @@ namespace FirstGroupProject
                                     Console.Clear();
                                     Console.WriteLine($"You added this sales log for store number {storeNumberInput}");
                                     menuLoop = false;
-                                    break;
+                                    goto SalesMenu;
                                 case "discard":
-                                    Console.WriteLine("Cool. It's gone. Try again?");
+                                    Console.WriteLine("Cool. It's gone.");
                                     menuLoop = false;
-                                    break;
+                                    goto SalesMenu;
+                                case "menu":
+                                    Console.Clear();
+                                    goto BeginningOfMainMenu;
                                 default:
                                     Console.Clear();
                                     Console.WriteLine("Invalid choice");
                                     break;
                             }
-                            break;
+                            Console.Clear();
+                            goto BeginningOfMainMenu;
                         case "2":
                             Console.WriteLine("WE'RE STILL WORKING ON THIS");
                             break;

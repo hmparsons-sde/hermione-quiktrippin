@@ -12,9 +12,9 @@ namespace FirstGroupProject.Employees
         public string Name { get; set; }
         public JobType JobTitle { get; set; }
         public int StoreNumber { get; set; }
-        public short RetailSales { get; set; }
+        public int RetailSales { get; set; }
 
-        public Employee(string name, JobType jobTitle, int storeNumber, short retailSales)
+        public Employee(string name, JobType jobTitle, int storeNumber, int retailSales)
         {
             Name = name;
             JobTitle = jobTitle;

@@ -12,12 +12,12 @@ namespace FirstGroupProject.StoreSales
 
         public int SaleId { get; set; }
         public int StoreNumber { get; set; }
-        public short GasYearly { get; set; }
-        public short GasCurrentQuarter { get; set; }
-        public short RetailYearly { get; set; }
-        public short RetailCurrentQuarter { get; set; }
+        public int GasYearly { get; set; }
+        public int GasCurrentQuarter { get; set; }
+        public int RetailYearly { get; set; }
+        public int RetailCurrentQuarter { get; set; }
 
-        public Sale(string storeNumber, short gasYearly, short gasCurrentQuarter, short retailYearly, short retailCurrentQuarter)
+        public Sale(string storeNumber, int gasYearly, int gasCurrentQuarter, int retailYearly, int retailCurrentQuarter)
         {
             this.storeNumber = storeNumber;
             GasYearly = gasYearly;
