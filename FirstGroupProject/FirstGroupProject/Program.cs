@@ -73,7 +73,7 @@ namespace FirstGroupProject
                     var storeNumberInput = Console.ReadLine();
                     //var specificStoreSaleLog = SalesWizards[(Int32.Parse(storeNumberInput) - 1)];
                     Console.Clear();
-                    Console.WriteLine($"Enter a sales log for {storeNumberInput}.");
+                    Console.WriteLine($"Enter a sales log for Store: {storeNumberInput}.");
                     Console.WriteLine();
                     Console.WriteLine("Enter the Yearly Gas Sales in USD:");
                     var gasYearly = short.Parse(Console.ReadLine());

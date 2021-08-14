@@ -17,16 +17,6 @@ namespace FirstGroupProject.StoreSales
         public short RetailYearly { get; set; }
         public short RetailCurrentQuarter { get; set; }
 
-        public Sale(int saleId, int storeNumber, short gasYearly, short gasCurrentQuarter, short retailYearly, short retailCurrentQuarter)
-        {
-            SaleId = saleId;
-            StoreNumber = storeNumber;
-            GasYearly = gasYearly;
-            GasCurrentQuarter = gasCurrentQuarter;
-            RetailYearly = retailYearly;
-            RetailCurrentQuarter = retailCurrentQuarter;
-        }
-
         public Sale(string storeNumber, short gasYearly, short gasCurrentQuarter, short retailYearly, short retailCurrentQuarter)
         {
             this.storeNumber = storeNumber;
