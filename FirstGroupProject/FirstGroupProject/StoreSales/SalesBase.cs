@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FirstGroupProject.StoreSales
 {
-    class StoreSalesClass
+    class SalesBase
     {
+        public string StoreNumber { get; set; }
     }
-
 }
