@@ -42,7 +42,6 @@ namespace FirstGroupProject
                             //bool saleLoop = true;
                             Console.Clear();
 
-                            Console.WriteLine("Add a new sales log:");
                             Console.WriteLine("What is the store number?");
                             var storeNumberInput = Console.ReadLine();
                             Console.Clear();
@@ -69,7 +68,7 @@ namespace FirstGroupProject
                             Console.WriteLine($"{storeNumberInput}-------------\nSold {gasYearly}USD in gas sales, 2020\nSold {gasCurrentQuarter}USD in gas, Q2 2021\nSold {retailYearly}USD in retail sales, 2020\nSold {retailCurrentQuarter}USD in gas, Q2 2021");
                             Console.WriteLine("");
 
-
+                            Console.Clear();
                             Console.WriteLine("Would you like to save this report, discard it, or return to the main menu? (Please type 'save,' 'discard,' or 'menu.')");
                             var userResponse = Console.ReadLine();
                             switch (userResponse.ToLower())
@@ -79,7 +78,7 @@ namespace FirstGroupProject
                                     Console.Clear();
                                     Console.WriteLine($"You added this sales log for store number {storeNumberInput}");
                                     menuLoop = false;
-                                    break;
+                                    goto SalesMenu;
                                 case "discard":
                                     Console.WriteLine("Cool. It's gone.");
                                     menuLoop = false;
