@@ -25,7 +25,6 @@ namespace FirstGroupProject.StoreSales
             RetailYearly = retailYearly;
             RetailCurrentQuarter = retailCurrentQuarter;
         }
-
         public class SalesWizard : SalesBase
         {
             public Dictionary<int, Sale> SalesDictionary { get; set; } = new Dictionary<int, Sale>();
