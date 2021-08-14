@@ -1,4 +1,6 @@
-﻿using FirstGroupProject.Employees;
+﻿using FirstGroupProject.Districts;
+using FirstGroupProject.Employees;
+using FirstGroupProject.Stores;
 using System;
 
 
@@ -77,8 +79,58 @@ namespace FirstGroupProject
                     //TODO: display employee info report (maybe)
                     break;
                 case "4":
-                    Console.WriteLine("WE'RE STILL WORKING ON THIS");
-                    //TODO: Create store variables and add them to collection
+                    Console.WriteLine("Time to add a store!");
+                    Console.WriteLine("What is the name of your store? Please enter a three-digit number");
+                    storeNumber = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine($"Your store number is {storeNumber}. Please press enter to continue.");
+                    string storeDistrict = Console.ReadLine();
+                    bool startLoop2 = true;
+                    while (startLoop2)
+                    {
+                        Console.WriteLine($"What district is your store in?");
+                        Console.WriteLine("1- Gryffindor");
+                        Console.WriteLine("2- Hufflepuff");
+                        Console.WriteLine("3- Ravenclaw");
+                        Console.WriteLine("4- Slytherin");
+                        switch (Console.ReadLine())
+                        {
+                            case "1":
+                                storeDistrict = DistrictType.Gryffindor.ToString();
+                                Console.WriteLine(storeDistrict);
+                                startLoop2 = false;
+                                break;
+                            case "2":
+                                storeDistrict = DistrictType.Hufflepuff.ToString();
+                                Console.WriteLine(storeDistrict);
+                                startLoop2 = false;
+                                break;
+                            case "3":
+                                storeDistrict = DistrictType.Ravenclaw.ToString();
+                                Console.WriteLine(storeDistrict);
+                                startLoop2 = false;
+                                break;
+                            case "4":
+                                storeDistrict = DistrictType.Slytherin.ToString();
+                                Console.WriteLine(storeDistrict);
+                                startLoop2 = false;
+                                break;
+                            default:
+                                Console.WriteLine("That is not a valid answer!");
+                                break;
+
+                        }
+                    }
+
+                    var storeRepo = new StoreRepository();
+                    storeRepo.Add(new Store { StoreNumber = storeNumber, DistrictHouse = storeDistrict });
+                    var storeToLoop = storeRepo.GetAll();
+
+                    foreach (var store in storeToLoop)
+                    {
+                        Console.WriteLine($"Store Number {store.StoreNumber} is in district {store.DistrictHouse}");
+                        Console.WriteLine($"---------------------------------------------------------------------");
+                    }
+
                     break;
                 case "5":
                     Console.WriteLine("WE'RE STILL WORKING ON THIS");

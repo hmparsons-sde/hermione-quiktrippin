@@ -22,6 +22,13 @@ namespace FirstGroupProject.Employees
             RetailSales = retailSales;
         }
 
+        public Employee(string name, JobType jobTitle)
+        {
+            Name = name;
+            JobTitle = jobTitle;
+
+        }
+
         //    static List<Employee> _employee = new List<Employee>();
 
         //    public List<Employee> GetEmployees()
