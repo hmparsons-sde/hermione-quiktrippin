@@ -13,6 +13,7 @@ namespace FirstGroupProject.Employees
         public JobType JobTitle { get; set; }
         public int StoreNumber { get; set; }
         public int RetailSales { get; set; }
+        public string PositionTitle { get; set; }
 
         public Employee(string name, JobType jobTitle, int storeNumber, int retailSales)
         {
@@ -21,28 +22,10 @@ namespace FirstGroupProject.Employees
             StoreNumber = storeNumber;
             RetailSales = retailSales;
         }
-
-        static List<Employee> _employee = new List<Employee>();
-
-        public List<Employee> GetEmployees()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Add(Employee employee)
-        {
-            _employee.Add(employee);
-        }
-
-        public List<Employee> GetAll()
-        {
-            return _employee;
-        }
-
-        public Employee(string name, JobType jobTitle)
+        public Employee(string name, string positionTitle )
         {
             Name = name;
-            JobTitle = jobTitle;
+            PositionTitle = positionTitle;
         }
     }
 

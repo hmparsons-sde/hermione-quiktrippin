@@ -4,7 +4,6 @@ using FirstGroupProject.Stores;
 using FirstGroupProject.StoreSales;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace FirstGroupProject
 {
@@ -14,9 +13,6 @@ namespace FirstGroupProject
         {
             //TODO: add dummy data if needed
             int storeNumber;
-            string name;
-            string jobTitle;
-            string districtType;
             Dictionary<int, Sale> wizardSalesDictionary = new();
             bool menuLoop = true;
             var initialSelection = "";
@@ -96,61 +92,17 @@ namespace FirstGroupProject
                             Console.Clear();
                             goto BeginningOfMainMenu;
                         case "2":
-                            Console.Clear();
-                            Console.WriteLine("Lets generate some numbers for you.");
-                            var districtHouse = Console.ReadLine();
-                            bool otherLoop = true;
-                            while (otherLoop)
-                            {
-                                Console.WriteLine("\n\x1B[4m Which district's report would you like?\x1B[0m ");
-                                Console.WriteLine("1. Gryffindor");
-                                Console.WriteLine("2. Hufflepuff");
-                                Console.WriteLine("3. Ravenclaw");
-                                Console.WriteLine("4. Slytherin");
-                                switch (Console.ReadLine())
-                                {
-                                    case "1":
-                                        districtHouse = DistrictType.Gryffindor.ToString();
-                                        Console.WriteLine($"District Sales for {districtHouse}");
-                                        var districtStores = new StoreRepository();
-                                        var storesInDistrict = districtStores.GetAll().Where(s => s.DistrictHouse == districtHouse.ToString()).ToList();
-                                        foreach (Store s in storesInDistrict)
-                                        {
-                                            Console.WriteLine($"Store {s.StoreNumber} is in {s.DistrictHouse}. The store manager is {s.StoreManager.Name}");
-                                        }
-                                        otherLoop = false;
-                                        break;
-                                    case "2":
-                                        districtHouse = DistrictType.Hufflepuff.ToString();
-                                        Console.WriteLine($"District Sales for {districtHouse}");
-                                        otherLoop = false;
-                                        break;
-                                    case "3":
-                                        districtHouse = DistrictType.Ravenclaw.ToString();
-                                        Console.WriteLine($"District Sales for {districtHouse}");
-                                        otherLoop = false;
-                                        break;
-                                    case "4":
-                                        districtHouse = DistrictType.Slytherin.ToString();
-                                        Console.WriteLine($"District Sales for {districtHouse}");
-                                        otherLoop = false;
-                                        break;
-                                    default:
-                                        Console.WriteLine("That is not a valid answer!");
-                                        break;
-                                }
-
-                             }
-
+                            Console.WriteLine("WE'RE STILL WORKING ON THIS");
                             break;
                         case "3":
                             Console.WriteLine("We're adding an employee");
-                            Console.Write("What is their name?");
-                            name = Console.ReadLine();
+                            Console.WriteLine("What is their name? Choose wisely and then press enter.");
+                            string name = Console.ReadLine();
+                            string position = "";
                             bool startLoop = true;
                             while (startLoop)
                             {
-                                Console.WriteLine("\n\x1B[4m What is their job title?\x1B[0m ");
+                                Console.WriteLine($"\n\x1B[4m What is {name}'s job title?\x1B[0m ");
                                 Console.WriteLine("1. District Manager");
                                 Console.WriteLine("2. Store Manager");
                                 Console.WriteLine("3. Assistant Manager");
@@ -158,23 +110,23 @@ namespace FirstGroupProject
                                 switch (Console.ReadLine())
                                 {
                                     case "1":
-                                        jobTitle = "District Manager";
-                                        Console.WriteLine(jobTitle);
+                                        position = JobType.DistrictManager.ToString();
+                                        Console.WriteLine(position);
                                         startLoop = false;
                                         break;
                                     case "2":
-                                        jobTitle = "Store Manager";
-                                        Console.WriteLine(jobTitle);
+                                        position = JobType.StoreManager.ToString();
+                                        Console.WriteLine(position);
                                         startLoop = false;
                                         break;
                                     case "3":
-                                        jobTitle = "Assistant Manager";
-                                        Console.WriteLine(jobTitle);
+                                        position = JobType.AssistantManager.ToString();
+                                        Console.WriteLine(position);
                                         startLoop = false;
                                         break;
                                     case "4":
-                                        jobTitle = "Associate";
-                                        Console.WriteLine(jobTitle);
+                                        position = JobType.Associate.ToString();
+                                        Console.WriteLine(position);
                                         startLoop = false;
                                         break;
                                     default:
@@ -183,18 +135,22 @@ namespace FirstGroupProject
 
                         }
                     }
-                    Console.Write("What store number? ");
-                    storeNumber = Int32.Parse(Console.ReadLine());
-                    //TODO: add new Employee to employee list
-                    //TODO: display employee info report (maybe)
+                            var employeeListRepo = new EmployeeRepository();
+                            employeeListRepo.Add(new Employee(name, position));
+                            var employeeList = employeeListRepo.GetAll();
+
+                            foreach (Employee e in employeeList)
+                            {
+                                Console.WriteLine($"Name: {e.Name} / Job Title: {e.PositionTitle}");
+                            }
                     break;
                 case "4":
                     Console.WriteLine("Time to add a store!");
                     Console.WriteLine("What is the name of your store? Please enter a three-digit number");
                     storeNumber = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine($"Your store number is {storeNumber}. Please press enter to continue.");
-                    string storeDistrict = Console.ReadLine();
-                    bool startLoop2 = true;
+                    Console.WriteLine($"Your store number is {storeNumber}.");
+                            string storeDistrict = "";
+        ;                    bool startLoop2 = true;
                     while (startLoop2)
                     {
                         Console.WriteLine($"What district is your store in?");
