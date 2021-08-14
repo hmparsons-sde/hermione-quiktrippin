@@ -41,6 +41,7 @@ namespace FirstGroupProject
                             //bool saleLoop = true;
                             Console.Clear();
 
+                            Console.WriteLine("Add a new sales log:");
                             Console.WriteLine("What is the store number?");
                             var storeNumberInput = Console.ReadLine();
                             Console.Clear();
