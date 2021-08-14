@@ -38,6 +38,12 @@ namespace FirstGroupProject.Employees
         {
             return _employee;
         }
+
+        public Employee(string name, JobType jobTitle)
+        {
+            Name = name;
+            JobTitle = jobTitle;
+        }
     }
 
 
