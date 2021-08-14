@@ -10,6 +10,7 @@ namespace FirstGroupProject.Employees
     {
         StoreManager,
         AssistantManager,
-        Asscoiate
+        Associate,
+        DistrictManager
     }
 }
