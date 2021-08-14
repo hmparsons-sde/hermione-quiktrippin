@@ -4,20 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FirstGroupProject.Districts;
+using FirstGroupProject.Employees;
 
 namespace FirstGroupProject.Stores
 {
-    class Stores
+    public class Store
     {
-        //TODO: add a group of associates, store manager and assistant manager. 
+
         public int StoreNumber { get; set; }
-        public DistrictType DistrictHouse { get; set; }
-
-        public Stores(int storeNumber, DistrictType districtHouse)
-        {
-            StoreNumber = storeNumber;
-            DistrictHouse = districtHouse;
-        }
-
+        public string DistrictHouse { get; set; }
+        public Employee Associate { get; set; }
+        public Employee StoreManager { get; set; }
+        public Employee AssistantManager { get; set; }
     }
 }
